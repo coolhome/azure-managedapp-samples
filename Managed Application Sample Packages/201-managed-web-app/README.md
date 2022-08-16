@@ -21,15 +21,15 @@ $location = "<rgLocation>"
 $authorization = "<principalId:roleDefinitionId>"
 $uri = "https://raw.githubusercontent.com/Azure/azure-managedapp-samples/master/Managed Application Sample Packages/201-managed-web-app/managedwebapp.zip"
 
-New-AzureRmManagedApplicationDefinition -Name "ManagedWebApp" `
-                                        -ResourceGroupName $rgname `
-                                        -DisplayName "Managed Web App" `
-                                        -Description "Managed Web App with Azure mgmt" `
-                                        -Location $location `
-                                        -LockLevel ReadOnly `
-                                        -PackageFileUri $uri `
-                                        -Authorization $authorization `
-                                        -Verbose
+New-AzManagedApplicationDefinition -Name "ManagedWebApp" `
+                                   -ResourceGroupName $rgname `
+                                   -DisplayName "Managed Web App" `
+                                   -Description "Managed Web App with Azure mgmt" `
+                                   -Location $location `
+                                   -LockLevel ReadOnly `
+                                   -PackageFileUri $uri `
+                                   -Authorization $authorization `
+                                   -Verbose
 ````
 
 ### Deploy using AzureCLI

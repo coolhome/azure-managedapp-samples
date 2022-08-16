@@ -21,15 +21,15 @@ $location = "<rgLocation>"
 $authorization = "<principalId:roleDefinitionId>"
 $uri = "https://raw.githubusercontent.com/Azure/azure-managedapp-samples/master/Managed Application Sample Packages/201-managed-service-fabric/managedservicefabric.zip"
 
-New-AzureRmManagedApplicationDefinition -Name "ManagedServiceFabric" `
-                                        -ResourceGroupName $rgname `
-                                        -DisplayName "Managed Service Fabric" `
-                                        -Description "Managed Service Fabric with Azure mgmt." `
-                                        -Location $location `
-                                        -LockLevel ReadOnly `
-                                        -PackageFileUri $uri `
-                                        -Authorization $authorization `
-                                        -Verbose
+New-AzManagedApplicationDefinition -Name "ManagedServiceFabric" `
+                                   -ResourceGroupName $rgname `
+                                   -DisplayName "Managed Service Fabric" `
+                                   -Description "Managed Service Fabric with Azure mgmt." `
+                                   -Location $location `
+                                   -LockLevel ReadOnly `
+                                   -PackageFileUri $uri `
+                                   -Authorization $authorization `
+                                   -Verbose
 ````
 
 ### Deploy using AzureCLI

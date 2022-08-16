@@ -22,15 +22,15 @@ $location = "<rgLocation>"
 $authorization = "<principalId:roleDefinitionId>"
 $uri = "https://raw.githubusercontent.com/Azure/azure-managedapp-samples/master/Managed Application Sample Packages/101-managed-vm/managedvm.zip"
 
-New-AzureRmManagedApplicationDefinition -Name "ManagedVM" `
-                                        -ResourceGroupName $rgname `
-                                        -DisplayName "Managed VM" `
-                                        -Description "Managed virtual machine" `
-                                        -Location $location `
-                                        -LockLevel ReadOnly `
-                                        -PackageFileUri $uri `
-                                        -Authorization $authorization `
-                                        -Verbose
+New-AzManagedApplicationDefinition -Name "ManagedVM" `
+                                   -ResourceGroupName $rgname `
+                                   -DisplayName "Managed VM" `
+                                   -Description "Managed virtual machine" `
+                                   -Location $location `
+                                   -LockLevel ReadOnly `
+                                   -PackageFileUri $uri `
+                                   -Authorization $authorization `
+                                   -Verbose
 ````
 
 ### Deploy using AzureCLI

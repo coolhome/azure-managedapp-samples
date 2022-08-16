@@ -19,15 +19,15 @@ $location = "<rgLocation>"
 $authorization = "<principalId:roleDefinitionId>"
 $uri = "https://raw.githubusercontent.com/Azure/azure-managedapp-samples/master/Managed Application Sample Packages/201-managed-storage-account/managedstorage.zip"
 
-New-AzureRmManagedApplicationDefinition -Name "ManagedStorage" `
-                                        -ResourceGroupName $rgname `
-                                        -DisplayName "Managed Storage Account" `
-                                        -Description "Managed Azure Storage Account" `
-                                        -Location $location `
-                                        -LockLevel ReadOnly `
-                                        -PackageFileUri $uri `
-                                        -Authorization $authorization `
-                                        -Verbose
+New-AzManagedApplicationDefinition -Name "ManagedStorage" `
+                                   -ResourceGroupName $rgname `
+                                   -DisplayName "Managed Storage Account" `
+                                   -Description "Managed Azure Storage Account" `
+                                   -Location $location `
+                                   -LockLevel ReadOnly `
+                                   -PackageFileUri $uri `
+                                   -Authorization $authorization `
+                                   -Verbose
 ````
 
 ### Deploy using AzureCLI
