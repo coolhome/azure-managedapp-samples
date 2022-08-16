@@ -31,7 +31,7 @@ Modify the snippet below to deploy Managed Application definition to a Resource 
 ````powershell
 $rgname = "<yourRgName>"
 $location = "<rgLocation>"
-$authorization = "<userOrGroupId>:<RBACRoleDefinitionId>"
+$authorization = "<principalId:roleDefinitionId>"
 $uri = "https://raw.githubusercontent.com/Azure/azure-managedapp-samples/master/Managed Application Sample Packages/101-minimal-template/minimal-template.zip"
 
 New-AzureRmManagedApplicationDefinition -Name "MinimalTemplate" `
@@ -57,6 +57,6 @@ az managedapp definition create \
   --lock-level ReadOnly \
   --display-name "Minimal Template" \
   --description "A minimal template" \
-  --authorizations "<userOrGroupId>:<RBACRoleDefinitionId>" \
+  --authorizations "<principalId:roleDefinitionId>" \
   --package-file-uri "https://raw.githubusercontent.com/Azure/azure-managedapp-samples/master/Managed Application Sample Packages/101-minimal-template/minimal-template.zip"
 ````

@@ -18,7 +18,7 @@ Modify the snippet below to deploy Managed Application definition to a Resource 
 ````powershell
 $rgname = "<yourRgName>"
 $location = "<rgLocation>"
-$authorization = "<userOrGroupId>:<RBACRoleDefinitionId>"
+$authorization = "<principalId:roleDefinitionId>"
 $uri = "https://raw.githubusercontent.com/Azure/azure-managedapp-samples/master/Managed Application Sample Packages/201-managed-sql-iaas/managedSql.zip"
 
 New-AzureRmManagedApplicationDefinition -Name "ManagedSql" `
@@ -44,6 +44,6 @@ az managedapp definition create \
   --lock-level ReadOnly \
   --display-name "Managed SQL IaaS" \
   --description "Managed SQL IaaS with automated patching and backup" \
-  --authorizations "<userOrGroupId>:<RBACRoleDefinitionId>" \
+  --authorizations "<principalId:roleDefinitionId>" \
   --package-file-uri "https://raw.githubusercontent.com/Azure/azure-managedapp-samples/master/Managed Application Sample Packages/201-managed-sql-iaas/managedSql.zip"
 ````

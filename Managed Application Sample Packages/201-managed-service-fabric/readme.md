@@ -18,7 +18,7 @@ Modify the snippet below to deploy Managed Application definition to a Resource 
 ````powershell
 $rgname = "<yourRgName>"
 $location = "<rgLocation>"
-$authorization = "<userOrGroupId>:<RBACRoleDefinitionId>"
+$authorization = "<principalId:roleDefinitionId>"
 $uri = "https://raw.githubusercontent.com/Azure/azure-managedapp-samples/master/Managed Application Sample Packages/201-managed-service-fabric/managedservicefabric.zip"
 
 New-AzureRmManagedApplicationDefinition -Name "ManagedServiceFabric" `
@@ -44,7 +44,7 @@ az managedapp definition create \
   --lock-level ReadOnly \
   --display-name "Managed Service Fabric" \
   --description "Managed Service Fabric with Azure mgmt." \
-  --authorizations "<userOrGroupId>:<RBACRoleDefinitionId>" \
+  --authorizations "<principalId:roleDefinitionId>" \
   --package-file-uri "https://raw.githubusercontent.com/Azure/azure-managedapp-samples/master/Managed Application Sample Packages/201-managed-service-fabric/managedservicefabric.zip"
 ````
 

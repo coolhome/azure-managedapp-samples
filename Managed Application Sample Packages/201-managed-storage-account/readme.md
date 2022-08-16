@@ -16,7 +16,7 @@ Clicking on the button below, will create the Managed Application definition to 
 ````powershell
 $rgname = "<yourRgName>"
 $location = "<rgLocation>"
-$authorization = "<userOrGroupId>:<RBACRoleDefinitionId>"
+$authorization = "<principalId:roleDefinitionId>"
 $uri = "https://raw.githubusercontent.com/Azure/azure-managedapp-samples/master/Managed Application Sample Packages/201-managed-storage-account/managedstorage.zip"
 
 New-AzureRmManagedApplicationDefinition -Name "ManagedStorage" `
@@ -42,7 +42,7 @@ az managedapp definition create \
   --lock-level ReadOnly \
   --display-name "Managed Storage Account" \
   --description "Managed Azure Storage Account" \
-  --authorizations "<userOrGroupId>:<RBACRoleDefinitionId>" \
+  --authorizations "<principalId:roleDefinitionId>" \
   --package-file-uri "https://raw.githubusercontent.com/Azure/azure-managedapp-samples/master/Managed Application Sample Packages/201-managed-storage-account/managedstorage.zip"
 ````
 
