@@ -1,7 +1,7 @@
 # Managed Azure Storage Account (without Ui Definition)
 
 >Note: This sample is for Managed Application in Service Catalog. For Marketplace, please see these instructions:
-[**Marketplace Managed Application**](/1-contribution-guide/marketplace.md#transitioning-to-marketplace)
+[**Marketplace Managed Application**](https://docs.microsoft.com/en-us/azure/managed-applications/publish-marketplace-app)
 
 ## How to try out this Azure Managed Application
 
